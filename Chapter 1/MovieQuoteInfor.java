@@ -1,5 +1,5 @@
 
-public class 6 {
+public class MovieQuoteInfor {
     public static void main(String[] args) {
         String quote =  "There's no way we could meet. But one thing is certain. If we see each other, we'll know. That you were the one who was inside me. That I was the one who was inside you.";
         String movie = "Your name";
