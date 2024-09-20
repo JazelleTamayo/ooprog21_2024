@@ -1,6 +1,6 @@
 public class FirstAddressExercise {
     public static void main(String[] args) {
-        System.out.println("First Java application");
+        System.out.println("First Java application\n");
         displayAddress();
     }
 
