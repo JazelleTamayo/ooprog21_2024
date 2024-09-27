@@ -9,21 +9,21 @@ public class Circle {
         area = Math.PI * radius * radius;
     }
 
-    public void setRadius(double rad) {
+    public static void setRadius(double rad) {
         radius = rad;
         diameter = 2 * radius;
-        area = Math.PI * rad * radius;
+        area = Math.PI * radius * radius;
     }
 
-    public double getRadius() {
+    public static double getRadius() {
         return radius;
     }
 
-    public double getDiameter() {
+    public static double getDiameter() {
         return diameter;
     }
 
-    public double getArea() {
+    public static double getArea() {
         return area;
     }
 }
