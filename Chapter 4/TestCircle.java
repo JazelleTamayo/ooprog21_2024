@@ -14,11 +14,6 @@ public class TestCircle {
       System.out.println("Diameter of the second circle: " + b.getDiameter());
       System.out.println("Area of the second circle: " + b.getArea());
       
-      c.setRadius(10);
-      System.out.println("Radius of the third circle: " +c.getRadius());
-      System.out.println("Diameter of the third circle: " + c.getDiameter());
-      System.out.println("Area of the third circle: " + c.getArea());
-      
     }
 }
       
