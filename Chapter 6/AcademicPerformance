@@ -1,0 +1,28 @@
+using System;
+
+namespace AcademicPerformance
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.Write("Enter your grade: ");
+            double grade = Convert.ToDouble(Console.ReadLine());
+
+            switch (grade >= 3.0) 
+            {
+                case true:
+                    Console.WriteLine("You failed!");
+                    break;
+
+                case false:
+                    Console.WriteLine("You passed!");
+                    break;
+            }           
+
+        }
+
+    }
+
+}
