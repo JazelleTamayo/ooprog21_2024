@@ -1,0 +1,36 @@
+using System;
+
+namespace DiscountCalculator;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter the total purchase amount: ");
+        double amount = Convert.ToDouble(Console.ReadLine());
+
+        double discount;
+
+        if (amount > 5000)
+        {
+            discount = amount * 0.20;
+            Console.WriteLine("The overall total purchase is " + (amount - discount));
+            Console.WriteLine("20% discount was applied!");
+
+        }
+        else if (amount >= 2000 && amount <= 5000)
+        {
+            discount = amount * 0.10;
+            Console.WriteLine("The overall total purchase is " + (amount - discount));
+            Console.WriteLine("10% discount was applied!");
+        }
+        else
+        {
+            Console.WriteLine("The overall total amount of purchase is " + amount);
+            Console.WriteLine("No discount was applied!");
+        }
+
+    }
+
+        
+}
