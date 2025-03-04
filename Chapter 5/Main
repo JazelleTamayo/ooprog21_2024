@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        PhoneDirectory directory = new PhoneDirectory(30);
+
+        // Assign names and phone numbers for the first 10 people
+        String[] initialNames = {"Ana", "Ben", "Cathy", "David", "Emily", "Frank", "Grace", "Henry", "Ivy", "Jack"};
+        String[] initialPhoneNumbers = {"09205703793", "09175551212", "09998887777", "09123456789", "09221112222", "09187654321", "09332223333", "09065432100", "09251122334", "09199876543"};
+        for (int i = 0; i < 10; i++) {
+            directory.addEntry(initialNames[i], initialPhoneNumbers[i]);
+        }
+
+        String name;
+        do {
+            System.out.print("Enter a name (or 'quit' to exit): ");
+            name = scanner.nextLine();
+            if (!name.equalsIgnoreCase("quit")) {
+                String phoneNumber = directory.getPhoneNumber(name);
+                if (phoneNumber != null) {
+                    System.out.println("Phone number for " + name + ": " + phoneNumber);
+                } else {
+                    System.out.print("Name not found. Enter phone number for " + name + ": ");
+                    String newPhoneNumber = scanner.nextLine();
+                    directory.addEntry(name, newPhoneNumber);
+                }
+            }
+        } while (!name.equalsIgnoreCase("quit"));
+
+        scanner.close();
+    }
+}
