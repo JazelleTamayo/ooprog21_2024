@@ -1,0 +1,32 @@
+class PhoneDirectory {
+    private String[] names;
+    private String[] phoneNumbers;
+    private int size;
+    private int count; // Keep track of the number of entries
+
+    public PhoneDirectory(int size) {
+        this.names = new String[size];
+        this.phoneNumbers = new String[size];
+        this.size = size;
+        this.count = 0; // Initialize count to 0
+    }
+
+    public void addEntry(String name, String phoneNumber) {
+        if (count < size) {
+            names[count] = name;
+            phoneNumbers[count] = phoneNumber;
+            count++;
+        } else {
+            System.out.println("Directory is full. Cannot add more entries.");
+        }
+    }
+
+    public String getPhoneNumber(String name) {
+        for (int i = 0; i < count; i++) { // Only search up to the filled portion
+            if (names[i].equalsIgnoreCase(name)) {
+                return phoneNumbers[i];
+            }
+        }
+        return null;
+    }
+}
