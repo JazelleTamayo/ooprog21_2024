@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class MainApp {
+   public static void main(String[] args) {
+   
+      Scanner input = new Scanner(System.in);
+      
+      int[] age = new int[3];      
+      System.out.println("Enter your age: ");
+      age[0] = input.nextInt();
+      
+      System.out.println(age[0]);
+   }
+}
