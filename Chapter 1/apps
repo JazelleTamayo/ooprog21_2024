@@ -1,0 +1,44 @@
+try
+{
+    int score1 = int.Parse(textBox1.Text);
+    int score2 = int.Parse(textBox2.Text);
+    int score3 = int.Parse(textBox3.Text);
+
+    if (score1 < 0 || score1 > 100 || score2 < 0 || score2 > 100 || score3 < 0 || score3 > 100)
+    {
+        label1.Text = "Invalid score";
+        return;
+    }
+
+    int[] scores = { score1, score2, score3 };
+    Array.Sort(scores);
+    int highestSum = scores[1] + scores[2];
+
+    string grade;
+    if (highestSum >= 180)
+    {
+        grade = "A";
+    }
+    else if (highestSum >= 160)
+    {
+        grade = "B";
+    }
+    else if (highestSum >= 140)
+    {
+        grade = "C";
+    }
+    else if (highestSum >= 120)
+    {
+        grade = "D";
+    }
+    else
+    {
+        grade = "F";
+    }
+
+    label1.Text = $"Highest Sum: {highestSum}, Grade: {grade}";
+}
+catch (FormatException)
+{
+    label1.Text = "Please enter valid integer scores.";
+}
